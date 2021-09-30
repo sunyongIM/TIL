@@ -119,6 +119,8 @@ A*cat*meow
 ## Git
 
 > **분산버전관리시스템 DVCS** (<==> 중앙집중식버전관리시스템)
+>
+> **파일 전체가 아닌 변경사항에 대한 버전관리**를 통한 효율화
 
 
 
@@ -363,6 +365,12 @@ $ git log -2 --oneline
 #### `clear `
 
 > 화면비우기
+>
+> `ctrl+l(알파벳 엘)`
+
+#### `cd`
+
+> 디렉토리 이동
 
 
 
@@ -372,7 +380,7 @@ $ git log -2 --oneline
 >
 > 원격저장소는 GitHub사이트에서 직접 만들어야 한다
 
-#### 원격저장소 등록
+### 원격저장소 등록
 
 `remote 추가 :` **$git remote add <이름> <url>**
 
@@ -381,13 +389,13 @@ $ git remote add origin https://github.com/sunyongIM/first.git
 $ git push -u origin master
 ```
 
-- git 원격저장소(remote)를 추가(add) 해줘. origin이란 변수에 url을 등록
+- git 원격저장소(remote)를 추가(add) 해줘. origin이란 이름(변수)에 url을 등록
 - u : upstream 기본 원격/브랜치
   - 이후로는 git push만 해도 기본 원격/브랜치에 push 된다
 
 
 
-#### 원격저장소 확인
+### 원격저장소 확인
 
 `remote 확인 : `**$ git remote -v**
 
@@ -399,21 +407,46 @@ $ git push -u origin master
 
 
 
-#### push
+### 원격저장소 제거
 
-> commit을 원격저장소에 업데이트
+`remote 제거 :` **$ git remote rm <이름>**
+
+```bash
+$ git remote rm origin
+```
+
+
+
+### push
+
+> **commit**을 원격저장소에 업데이트
 >
 > (자동 push없음, 동기화 X )
+>
+> `버전이 일치하지 않을경우 :`(원격저장소의 업데이트가 반영되지 않았을경우) push 오류
+>
+> ==> pull하여 버전을 동기화 한 이후 다시 commit ==> push 해야한다 `= merge commit`
 
-`remote 업데이트 :`$ git push <원격저장소이름> <브랜치이름>
+`remote 업데이트 :`**$ git push <원격저장소이름> <브랜치이름>**
 
 ```bash
 $ git push 
 ```
 
-#### pull
+### pull
 
 > 원격 저장소로부터 변경된 내역을 받아와서 이력을 병합함
+>
+> commit 들만 받아온다
 
-`remote 활용 :`$ git pull <원격저장소이름> <브랜치이름>
+`remote 활용 :`**$ git pull <원격저장소이름> <브랜치이름>**
+
+
+
+### clone
+
+원격 저장소에서 zip파일로 다운로드 받으면 .git없이 파일만 받아짐(ver log가 없음)
+
+`파일과 버전(.git) 가져오기 :` **$ git clone <url>**
+
 
