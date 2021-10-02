@@ -69,9 +69,7 @@ System.out.println("hello");
 
 - 드래그앤드롭으로도 이미지 삽입 가능
 
-  ![문자열](md-images/markdown_image-16328822537142.jpg)
-
-  ![markdown_image](md-images/markdown_image-16328789865031.jpg)
+  ![markdown_image](md-images/markdown_image-16329938083981.jpg)
 
 ### 7. Blockquotes (인용문)
 
@@ -448,5 +446,4 @@ $ git push
 원격 저장소에서 zip파일로 다운로드 받으면 .git없이 파일만 받아짐(ver log가 없음)
 
 `파일과 버전(.git) 가져오기 :` **$ git clone <url>**
-
 
