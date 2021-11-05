@@ -92,6 +92,10 @@ System.out.println("hello");
 
 ### 9. text 강조
 
+> bold체는 적용할 글자블록을 ctrl+b해도 된다.
+>
+> Italic체는 적용할 글자블록을 ctrl+i해도 된다.
+
 - 굵게(bold), 기울임(Italic)을 통해 특정 글자들 강조
 - *로 글자나 문장을 감싸면 됨
 - *==> 기울임, **==>굵게
