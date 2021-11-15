@@ -2,11 +2,23 @@
 
 
 
-## framework
+## Spring 이전
+
+web.xml - 서블릿 매핑에 사용
+
+
+
+# Framework
 
 > 반제품, 자동화
 
 
+
+## IOC 컨테이너의 종류
+
+- BeanFactory
+  - 
+- ApplicationContext
 
 
 
@@ -38,6 +50,8 @@
 요청처리와 아웃풋 처리하는 데 필요한 정보
 
 > 위치 : src/main/webapp/WEB-INF/spring/appServlet/
+
+- url과 jsp파일을 연결
 
 
 
@@ -153,3 +167,72 @@ mysql의 경우 Timezone과 드라이버이름의 변경을 주의한다
 
 
 마이바티스의 modelConfig.xml에 적용되는 VO의 패키지명을 정확히 입력한다.
+
+
+
+
+
+# Ajax
+
+스프링 버전 4이상 (4.1.1.RELEASE)
+
+어노테이션 : @ResponseBody
+
+
+
+# restpool
+
+url변화없이 처리하는 기술
+
+@RestController
+
+
+
+# JSON
+
+> key:value맵핑을 배열로 전송하는 방법
+
+```java
+@ResponseBody
+public Map<String, Object> res1(){
+    Map<String, Object> map = new HashMap<String, Object>();
+    map.put("key1","value1");
+    map.put("key2","value2");
+    map.put("key3","value3");
+}
+```
+
+{key1:value1, key2:value2, key3:value3}
+
+
+
+json사용을 위한 pom.xml 설정코드
+
+```xml
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.5.4</version>
+</dependency>
+```
+
+
+
+json사용을 위해 VO를 Override하여 json형식에 맞춰야한다
+
+```java
+@Override
+	public String toString() {
+		String info = id+", "+ pwd+", "+ name+", "+ email;
+		return info;
+	}
+```
+
+
+
+
+
+## 제안요청서
+
+### Request For Proposal
+
