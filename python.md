@@ -36,17 +36,17 @@ or (|| 아님)
 
 and (&& 아님)
 
-#### 튜플
+#### 튜플 (List)
 
 > ()
 >
 > 리스트의 readonly 버전
 
-#### 리스트
+#### 리스트 (List)
 
 > []
 
-#### 딕셔너리
+#### 딕셔너리 (Map)
 
 > {}
 
@@ -89,6 +89,7 @@ s[5:12]			# == s[5:]
 
 > 'Morning'
 
+- s[a:b] : `a<= index <b`
 - **파라메타의 (숨겨진) 디폴트값이 있음**
 
 
@@ -104,6 +105,8 @@ s[5:12]			# == s[5:]
 >두줄띄고 작성
 >
 >**들여쓰기(tab)로 종속관계를 구분한다**
+>
+>Java의 메서드와 비슷
 
 ```python
 def test():
@@ -150,4 +153,32 @@ def isLeapYear(year):
 
 
 > else if 대신 elif 사용가능
+
+
+
+
+
+## 모듈
+
+> Java의 클래스와 비슷
+>
+> 함수는 Java의 메서드와 비슷
+
+
+
+## 클래스
+
+```python
+class MemberVO:
+    def __init__(self, id, pwd, name):
+        self.id = id            #self가 붙은 변수는 MemberVO클래스의 member변수 또는 field가 된다
+        self.pwd = pwd
+        self.name = name
+
+
+    def __str__(self):          #ToString과 같은역할
+        return '{0}, {1}, {2}'.format(self.id, self.pwd, self.name)
+
+    pass
+```
 
