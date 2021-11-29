@@ -152,9 +152,12 @@
 > 제목과 본문 글자 태그
 
 - `<h1>~<h6>` : 제목 태그 - head
-- `<p>` : 본문 문단 생성 - paragraph
-- `<br>` : 줄 바꿈 (닫는 태그 없음) - break
+- `<p>` : 본문 문단 생성 ;큰 엔터 - paragraph
+- `<br>` : 줄 바꿈 (닫는 태그 없음) ;작은 엔터 - break
 - `<hr>` : 수평 줄 삽입 (닫는 태그 없음) - horizontal rule
+  - `<blockquote>` : 인용문을 넣는 태그
+  - `<pre>` : 글자, 글꼴, 줄 바꿈을 입력한 그대로 출력하는 태그
+
 
 > 글자모양 태그
 
@@ -189,6 +192,22 @@
 <!--같은폴더에 있는 page2.html을 하이퍼링크-->
 ```
 
+- 페이지 내부이동 (책갈피)
+  - `<a href="#point 1"> 1번 단락이동 </a>`
+    - `<a id = "point 1"> 1번 단락</a>`
+- target 속성 : 지정된 href 주소를 보여줄 웹 브라우저의 위치를 지정함
+  - `<a href="" target = "_self"></a>`
+    - 속성을 지정하지 않았을 경우의 디폴트값
+    - 현재 보고 있는 페이지에서 href로 지정한 사이트로 이동
+  - `<a href="" target = "_blank"></a>`
+    - 새로운 창이나 새탭으로 보여줌
+  - `<a href="" target = "_top"></a>`
+    - 사이트 상단으로 이동 (페이지 내부이동)
+- download 속성 : 지정된 href 주소를 보여주지 않고 파일로 다운받게 해줌
+  - `<a href="" target = "download"></a>`
+
+
+
 
 
 ## 목록 태그
@@ -196,7 +215,19 @@
 > 주로 내비게이션 메뉴를 만들 때 사용하는 목록
 
 - `<ul>` : 순서가 없는 목록 생성 - unordered list 
+  - type
+
+- <= disc
+  - <= circle
+    - <= square
 - `<ol>` : 순서가 있는 목록 생성 - ordered list
+  - type
+    - 1 (1,2,3,4)
+    - a (a,b,c,d)
+    - A (A,B,C,D)
+    - i (i,ii,iii,iv)
+    - I (I,II,III,IV)
+
 - `<li>` : 목록 요소 생성 - list item
 
 ```html
@@ -213,6 +244,8 @@
     </ol>
 </body>
 ```
+
+
 
 
 
@@ -351,4 +384,8 @@ WEB기술(HTML,CSS,Java Script)		 java		 	  	  		 	oracle
 서버도 자기책임성의 원칙을 적용 받는다.
 
 하나의 서버는 하나의 서비스를 한다. (전문적)
+
+
+
+
 
