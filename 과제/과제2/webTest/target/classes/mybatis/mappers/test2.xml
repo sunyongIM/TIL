@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+      PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.test2">
+	<resultMap id="memResult" type="LonginVO">
+		<result property="id" column="id" />
+		<result property="password" column="password" />
+		<result property="userName" column="userName" />
+	</resultMap>
+
+	<select id="loginById" resultType="LonginVO"
+		parameterType="LonginVO">
+	<![CDATA[
+		select * from test2tbl	
+		where id=#{id} and password=#{password}		
+	]]>
+	</select>
+
+</mapper>
